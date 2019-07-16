@@ -4,3 +4,4 @@
 - node --version
 3) npm install
 4) npm start
+5) зайти на localhost:3000
