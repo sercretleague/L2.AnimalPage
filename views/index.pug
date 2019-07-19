@@ -2,7 +2,7 @@ extends layout.pug
 
 block content
  div(class='header')
-    img(href='https://mirpozitiva.ru/uploads/posts/2017-04/medium/1492603358_00.jpg' alt='picture')
+    img(src='#' alt='picture')
     p Добро пожаловать на #{name}
     p тут ты найдешь котиков
  div(class='nav') 
@@ -19,15 +19,13 @@ block content
        a(href='#') Контакты
  div(class='first')
   div(class='content')
-   h3 Здесь будут планы по созданию страницы
-   h4 
+   p Здесь будут планы по созданию страницы 
     ol
       li накидать структуру сайта
       li обозначить приблизительный дизайн
       li придумать контент 
   div(class='content')
-   h3 Эта страница посвящена котам и котам принадлежит
-   h4
+   p Эта страница посвящена котам и котам принадлежит
     ul 
       li ты можешь спасти кота
       li ты можешь любить кота
