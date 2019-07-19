@@ -1,4 +1,36 @@
 extends layout.pug
 
 block content
-  h1 My favourite animal is #{name}
+ div(class='header')
+    img(href='https://mirpozitiva.ru/uploads/posts/2017-04/medium/1492603358_00.jpg' alt='picture')
+    p Добро пожаловать на #{name}
+    p тут ты найдешь котиков
+ div(class='nav') 
+    ul
+      li 
+       a(href='#') Главная страница
+      li
+       a(href='#') Новости
+      li
+       a(href='#') Галлерея
+      li
+       a(href='#') Поиск
+      li
+       a(href='#') Контакты
+ div(class='first')
+  div(class='content')
+   h3 Здесь будут планы по созданию страницы
+   h4 
+    ol
+      li накидать структуру сайта
+      li обозначить приблизительный дизайн
+      li придумать контент 
+  div(class='content')
+   h3 Эта страница посвящена котам и котам принадлежит
+   h4
+    ul 
+      li ты можешь спасти кота
+      li ты можешь любить кота
+      li ты можешь стать котом
+ div(class='footer')
+  a (c)opywright by <em>svinomatkin krot</em>
