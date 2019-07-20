@@ -1,3 +1,10 @@
 h1 {
-  color: green;
+  color: green; font-size: 70px
+}
+p {color: yellow;font-size: 20px }
+li {color: palegreen; font-size: 20px}
+table {border:black}+ p {color: orchid}
+img {width: 30%;height: 30%;}
+.ololo{
+  background-color: blueviolet;width: 30%;height: 20%; text-align: center
 }
