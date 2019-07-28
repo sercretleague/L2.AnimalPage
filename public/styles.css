@@ -1,3 +1,31 @@
 h1 {
   color: red;
+  text-align: center;
+  padding-top: 20px;
+   }
+
+main {
+  height: 100%;
+  width: 1000px;
+  margin: 0 auto
 }
+img {
+  width: 400px;
+}
+.header {
+  font-family: Geneva, Arial, Helvetica, sans-serif;
+  background-color: blueviolet;
+  display: block;
+  width: 100%;
+
+   }
+.header p {
+    display: block;
+    padding: 10px;
+    border-top: 1px solid red;
+    text-align: center;
+   }
+.content p {
+    display: block;
+    margin-left: 20px;
+   }
