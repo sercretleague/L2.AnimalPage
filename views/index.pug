@@ -1,34 +1,98 @@
 extends layout.pug
 
 block content
- div(class='header')
-    img(src='#' alt='picture')
-    p Добро пожаловать на #{name}
-    p тут ты найдешь котиков
- div(class='nav') 
+ .header 
+  .header-first
+   .soc
+    .social.facebook 
+      a(href='#') f
+    .social.vk
+      a(href='#') B
+    .social.twit
+      a(href='#') T
+   .geopos
+    p ул. Маяковская 6, 2
+     img(src='https://cdn.icon-icons.com/icons2/67/PNG/512/geofence_ge_13581.png', alt='oi') 
+   .phone
+    P +7(900)777-77-77
+     img(src='https://cdn.icon-icons.com/icons2/2008/PNG/512/mobile_phone_icon_123451.png', alt='oi') 
+  .header-second
+   .logo
+     a(href='#') COOLTECH
+   form(action="" method='get')
+    input(name="s" placeholder="Что будем искать" type="search")
+    button(type="submit") Найти
+   .links
+     a(href='#') Карта проезда
+     a(href='#') История заказов
+     a(href='#') Корзина 
+  .nav 
     ul
+     li 
+      a(href='#') Планшеты 
+     li 
+      a(href='#') Мобильные телефоны
+     li 
+      a(href='#') MP3 Плееры
+     li 
+      a(href='#') Персональные компьютеры
+     li 
+      a(href='#') Ноутбуки
+     li 
+      a(href='#') Аксессуары
+     li
+      a(href='#') Бытовая техника
+  .main-content
+    .nav__phones
+     h2 Мобильные телефоны
+     ul(class="line")
+      li
+       a(href='#') Флагманы
       li 
-       a(href='#') Главная страница
+       a(href="#") Бюджетные модели
+     ul(class='property')
       li
-       a(href='#') Новости
+       a(href="#") Наличие в магазинах
       li
-       a(href='#') Галлерея
-      li
-       a(href='#') Поиск
-      li
-       a(href='#') Контакты
- div(class='first')
-  div(class='content')
-   p Здесь будут планы по созданию страницы 
-    ol
-      li накидать структуру сайта
-      li обозначить приблизительный дизайн
-      li придумать контент 
-  div(class='content')
-   p Эта страница посвящена котам и котам принадлежит
-    ul 
-      li ты можешь спасти кота
-      li ты можешь любить кота
-      li ты можешь стать котом
- div(class='footer')
-  a (c)opywright by <em>svinomatkin krot</em>
+       a(href="#") Брэнды
+      li 
+       a(href="#") Цена
+      li 
+       a(href="#") Цвет 
+      li 
+       a(href="#") Операционные системы
+    .products
+     .sorted
+      form(action="")
+       label Сортировать по
+       select
+        option по цене
+        option по цвету
+       span Вид каталога
+     .content 
+      .product
+       .product-1
+        .product-img
+         .showpic-big
+          img(src='http://i1.sndcdn.com/artworks-000008965095-1gwupr-t500x500.jpg' alt='oi')
+         .showpic-small
+          img(src='http://i1.sndcdn.com/artworks-000008965095-1gwupr-t500x500.jpg')
+          img(src='http://i1.sndcdn.com/artworks-000008965095-1gwupr-t500x500.jpg')
+          img(src='http://i1.sndcdn.com/artworks-000008965095-1gwupr-t500x500.jpg')
+          p артикул-0
+        .product-property
+         h3 Красненькая жопа
+         p Красная жопа ОС ЖОПА жопа жопа моя жопа жопа макака 6гб  жопа жопа жопа дыра ЖПС есть
+       .product-2
+        .product-img
+         .showpic-big
+          img(src='http://i1.sndcdn.com/artworks-000008965095-1gwupr-t500x500.jpg' alt='oi')
+         .showpic-small
+          img(src='http://i1.sndcdn.com/artworks-000008965095-1gwupr-t500x500.jpg')
+          img(src='http://i1.sndcdn.com/artworks-000008965095-1gwupr-t500x500.jpg')
+          img(src='http://i1.sndcdn.com/artworks-000008965095-1gwupr-t500x500.jpg')
+          p артикул-1
+        .product-property
+         h3 Красненькая жопа
+         p Красная жопа ОС ЖОПА жопа ААААААААААААААА моя жопа жопа макака 6гб  жопа жопа жопа дыра ЖПС есть
+         img(src='')
