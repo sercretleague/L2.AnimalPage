@@ -4,8 +4,16 @@ block content
  body
   header(class='header')
     div(class='social')
-    div(class='adress')
-    div(class='phone')
+      a(href='#')
+        img(class='sm_icons' src='../images/icons/FB-icon.png' alt='FB-icon')
+      a(href='#')
+        img(class='sm_icons' src='../images/icons/FB-icon.png' alt='FB-icon')
+      a(href='#')
+        img(class='sm_icons' src='../images/icons/FB-icon.png' alt='FB-icon')
+      div(class='adress') 
+        span(class='adress__text') ул.Маяковская 6, офис 16
+      div(class='phone')
+        span(class='phone__text') +7(951)732-51-46
     div(class='logo')
     form(action="/submit", method="post")
       input(type="text", name="search", placeholder="Что будем искать?")
