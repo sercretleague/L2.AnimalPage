@@ -1,50 +1,48 @@
 extends layout.pug
 
 block content
- main
-  div(class='header')
+ body
+  header(class='header')
+    div(class='social')
+    div(class='adress')
+    div(class='phone')
     div(class='logo')
-     a(href="http://localhost:3000/")
-      img(src='../images/kitty.jpg' alt="кисонька")
-     h1 Добро пожаловать на #{name}
-    p Все о кисоньках
+    form(action="/submit", method="post")
+      input(type="text", name="search", placeholder="Что будем искать?")
+      input(type="submit", value="Найти")
+    ul(class='menu-horizontal')
+      li(class='menu-horizontal_basket') 
+        a(href='#') Карта проезда
+      li(class='menu-horizontal_basket')
+        a(href='#') История заказов
+      li(class='menu-horizontal_basket')
+        a(href='#') Корзина
+    ul(class='menu-horizontal')
+      li(class='menu-horizontal_main') 
+        a(href='#') Планшеты  
+      li(class='menu-horizontal_main')
+        a(href='#') Мобильные телефоны
+      li(class='menu-horizontal_main')
+        a(href='#') Mp3 Плееры
+      li(class='menu-horizontal_main') 
+        a(href='#') Персональные компьютеры
+      li(class='menu-horizontal_main')
+        a(href='#') Ноутбуки
+      li(class='menu-horizontal_main')
+        a(href='#') Аксессуары
+      li(class='menu-horizontal_main')
+        a(href='#') Бытовая техника
+    ul(class='menu-horizontal')
+      li(class='menu-horizontal_breadcrumbs')
+        a(href='#') Главная
+      li(class='menu-horizontal_breadcrumbs')
+        a(href='#') Каталог
+    h1 Мобильные телефоны
+        
   div(class='content')
-   p Кисонька — это полукошка-полуединорог, которая излучает счастье и радость, — до тех пор, пока не превратится в своё новое воплощение: Ультра Кису. В новом обличье это огромная, ревущая боевая машина.
-   div(class='advantages')
-    h2 Почему кисонька?
-    ul
-     li Мягкая и пушистая
-     li Ходит в лоток
-     li Может поцарапать и покусать
-   p Норма потребления корма для кисонек в день
-   table
-    tr
-     th Вес кисоньки
-     th Влажный корм
-     th Сухой корм
-    tr 
-     td 0-1.5 кг
-     td 150 гр
-     td 100 гр
-     
-    tr 
-     td 1.5-2.5 кг
-     td 250 гр
-     td 200 гр
-   p Норма потребления воды для кисонек в день
-   table
-    tr
-     th Вес кисоньки
-     th Питьевая вода
-    tr 
-     td 0-1.5 кг
-     td 150 мл
-      
-    tr 
-     td 1.5-2.5 кг
-     td 250 мл
-      
-     
-    
-    
-      
+    aside
+      ul(class='w-menu')
+      ul(class='w-menu w-menu_filter')
+    main
+      div(class='produts-view')
+      div(class='product-card')  
