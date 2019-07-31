@@ -1,0 +1,8 @@
+mixin social_icon(name)
+  li.socials__icon
+    a.socials__link(href='#')= name
+
+mixin socials(socials)
+  ul.header__socials.socials
+    each item in socials
+      +social_icon(item)

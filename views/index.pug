@@ -1,21 +1,16 @@
 extends layout.pug
+include mixins
 
 block content
- .header 
-  .header-first
-   .soc
-    .social.facebook 
-      a(href='#') f
-    .social.vk
-      a(href='#') B
-    .social.twit
-      a(href='#') T
-   .geopos
+ main.main
+  .header
+   +socials(['f', 'В', 'Т'])
+   .header__address.address
     p ул. Маяковская 6, 2
-     img(src='https://cdn.icon-icons.com/icons2/67/PNG/512/geofence_ge_13581.png', alt='oi') 
-   .phone
+     img.address__img(src='https://cdn.icon-icons.com/icons2/67/PNG/512/geofence_ge_13581.png', alt='oi')
+   .header__address.adress
     P +7(900)777-77-77
-     img(src='https://cdn.icon-icons.com/icons2/2008/PNG/512/mobile_phone_icon_123451.png', alt='oi') 
+     img.address__img(src='https://cdn.icon-icons.com/icons2/2008/PNG/512/mobile_phone_icon_123451.png', alt='oi')
   .header-second
    .logo
      a(href='#') COOLTECH

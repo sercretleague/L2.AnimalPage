@@ -1,25 +1,30 @@
 body {
   background-color: rgb(226, 233, 235);
 }
-.header {
+
+.main {
   width: 1280px;
   height: auto;
   margin: 0 auto;
 }
-.header-first {
-  display: inline-flex;
+
+.header {
   position: relative;
   box-shadow:  0 5px 6px rgba(5, 24, 49, 0.5);
   background-color: rgb(255, 255, 255);
   width: 1280px;
   height: 80px;
+  display: flex;
 }
-.soc {  
+
+.header__socials {
+  margin: 0;
   padding-left: 50px;
   position: relative;
   display: inline-block;
 }
-.social {
+
+.socials__icon {
   box-shadow:  0 5px 6px rgba(5, 24, 49, 0.5);
   margin: 10px;
   background-color: black;
@@ -35,14 +40,12 @@ body {
   display: inline-block;
 }
 
-.social:hover {
-  height: 40px;
-  width: 40px;
+.socials__icon:hover {
+  transform: scale(1.5);
   opacity:1;
-  font-size: 30px;
-
 }
-.social a {
+
+.socials__link {
   text-decoration: none;
   color: rgb(255, 255, 255);
   position: absolute;
@@ -51,22 +54,23 @@ body {
   display: inline-block;
   transform: translate(0, -50%); 
 }
-.geopos {
- margin-left: 600px;
+
+.header__address {
+  margin-left: auto;
 }
-.phone {
- padding-left: 100px;
+
+.header__address + .header__address {
+  margin-left: 100px;
+  margin-right: 100px;
 }
-.phone img {
-  float: left;
-  height: 24px;
-  width: 24px;
-}
-.geopos img {
+
+
+.address__img {
   float:left;
   height: 24px;
   width: 24px;
 }
+
 .header-second {
   width: 1280px;
   top:10px;
