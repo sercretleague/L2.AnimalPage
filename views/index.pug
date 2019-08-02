@@ -1,56 +1,144 @@
 extends layout.pug
 
 block content
- body
-  header(class='header')
-    div(class='social')
+  header.header
+    .social
       a(href='#')
-        img(class='sm_icons' src='../images/icons/FB-icon.png' alt='FB-icon')
+        img.sm-icons(src='/images/icons/FB-icon.png' alt='Facebook')
       a(href='#')
-        img(class='sm_icons' src='../images/icons/FB-icon.png' alt='FB-icon')
+        img.sm-icons(src='../images/icons/VK-icon.png' alt='Vkontakte')
       a(href='#')
-        img(class='sm_icons' src='../images/icons/FB-icon.png' alt='FB-icon')
-      div(class='adress') 
-        span(class='adress__text') ул.Маяковская 6, офис 16
-      div(class='phone')
-        span(class='phone__text') +7(951)732-51-46
-    div(class='logo')
-    form(action="/submit", method="post")
-      input(type="text", name="search", placeholder="Что будем искать?")
-      input(type="submit", value="Найти")
-    ul(class='menu-horizontal')
-      li(class='menu-horizontal_basket') 
-        a(href='#') Карта проезда
-      li(class='menu-horizontal_basket')
-        a(href='#') История заказов
-      li(class='menu-horizontal_basket')
-        a(href='#') Корзина
-    ul(class='menu-horizontal')
-      li(class='menu-horizontal_main') 
-        a(href='#') Планшеты  
-      li(class='menu-horizontal_main')
-        a(href='#') Мобильные телефоны
-      li(class='menu-horizontal_main')
-        a(href='#') Mp3 Плееры
-      li(class='menu-horizontal_main') 
-        a(href='#') Персональные компьютеры
-      li(class='menu-horizontal_main')
-        a(href='#') Ноутбуки
-      li(class='menu-horizontal_main')
-        a(href='#') Аксессуары
-      li(class='menu-horizontal_main')
-        a(href='#') Бытовая техника
-    ul(class='menu-horizontal')
-      li(class='menu-horizontal_breadcrumbs')
-        a(href='#') Главная
-      li(class='menu-horizontal_breadcrumbs')
-        a(href='#') Каталог
-    h1 Мобильные телефоны
-        
-  div(class='content')
+        img.sm-icons(src='../images/icons/TW-icon.png' alt='Twitter')
+      .adress
+        img.geo-tag-icon(src='/images/icons/geo-tag.png' alt='geo-tag')
+        span.adress__text ул.Маяковская 6, офис 16
+      .phone
+        span.phone__text +7(951)732-51-46
+    .search
+      span.logo COOLTECH
+      form.search-form(action="/submit", method="get")
+        input.search-input(type="search", name="s", placeholder="Что будем искать?")
+        button.search-button(type="submit") Найти
+      ul.h-menu.h-menu_basket
+        li.h-menu_basket_link
+          a.a_basket(href='#') Карта проезда
+        li.h-menu_basket_link
+          a.a_basket(href='#') История заказов
+        li.h-menu_basket_link
+          a.a_basket(href='#') Корзина
+    ul.h-menu.h-menu_main
+      li.h-menu_main_item
+        a.a.a_main(href='#') Планшеты  
+      li.h-menu_main_item
+        a.a.a_main.checked(href='#') Мобильные телефоны
+      li.h-menu_main_item
+        a.a.a_main(href='#') Mp3 Плееры
+      li.h-menu_main_item
+        a.a.a_main(href='#') Персональные компьютеры
+      li.h-menu_main_item
+        a.a.a_main(href='#') Ноутбуки
+      li.h-menu_main_item
+        a.a.a_main(href='#') Аксессуары
+      li.h-menu_main_item
+        a.a.a_main(href='#') Бытовая техника
+      
+  .content
+    .current
+      h1 Мобильные телефоны
+    ul.h-menu.h-menu_breadcrumbs
+      li.h-menu_breadcrumbs_item
+        a.a.breadcrumbs-a(href='#') Главная
+      li.h-menu_breadcrumbs_arrow >
+      li.h-menu_breadcrumbs_item
+        a.a.breadcrumbs-a_checked(href='#') Каталог  
     aside
-      ul(class='w-menu')
-      ul(class='w-menu w-menu_filter')
+      ul.w-menu.w-menu_category
+        li
+          a.a.a_w-menu.a_products(href='#') Флагманы
+        li
+          a.a.a_w-menu.a_products(href='#') Бюджетная линейка  
+      ul.w-menu.w-menu_filter
+        li
+          a.a.a_w-menu.a_filter(href='#') Наличие в магазинах
+        li
+          a.a.a_w-menu.a_filter(href='#') Брэнды
+        li
+          a.a.a_w-menu.a_filter(href='#') Цена
+        li
+          a.a.a_w-menu.a_filter(href='#') Цвет
+        li
+          a.a.a_w-menu.a_filter(href='#') Операционные системы
+        
     main
-      div(class='produts-view')
-      div(class='product-card')  
+      .products-view
+        span.view-sort_sort.view-sort_text Сортировать по
+        form(action="#" method="post")
+          select.select(name='sort')
+            option.option Цене
+            option.option Наличию
+            option.option Рейтингу
+        span.view-sort_view.view-sort_text Вид каталога
+        ul.view-menu
+          li
+            a.view-link
+              img.view-icons.view-icons_checked(src='/images/icons/list-icon.png' alt='список') 
+          li
+            a.view-link
+              img.view-icons(src='/images/icons/m-list-icon.png' alt='маркированный список')
+          li
+            a.view-link
+              img.view-icons(src='/images/icons/table-icon.png' alt='таблица')
+      .product-list 
+        .product-card
+          .product-images
+            a(href='#')
+              img.product-img.title-img(src='/images/phones-main.jpg' alt='главное фото')
+            .preview-img-block
+              a(href='#')
+                img.product-img.preview-img(src='/images/phones-preview-3.jpg' alt='превью') 
+              a(href='#')
+                img.product-img.preview-img(src='/images/phones-preview-2.jpg' alt='превью')
+              a(href='#')
+                img.product-img.preview-img(src='/images/phones-preview-3.jpg' alt='превью')  
+            .vendor-code Артикул 
+              span.vendor-code_value 0
+                          
+          .product-description
+            span.product-name Samsung GT 139101I GALAXY S3
+            p.p_short-description Samsung создали дизайн заново, чтобы вы испытали невероятный опыт погружения в происходящее на экране вашего смартфона. 
+            .rate
+              img.img-rate(src='/images/icons/rate.png', alt='рейтинг')
+              .review-quantity 3
+          .product-price
+            span.price 11290 p
+            a.a.product-button-basket(href='#') В корзину
+            .product-status
+              span.indicator
+              span.status В наличии
+
+        .product-card
+          .product-images
+            a(href='#')
+              img.product-img.title-img(src='/images/phones-main.jpg' alt='главное фото')
+            .preview-img-block
+              a(href='#')
+                img.product-img.preview-img(src='/images/phones-preview-3.jpg' alt='превью') 
+              a(href='#')
+                img.product-img.preview-img(src='/images/phones-preview-2.jpg' alt='превью')
+              a(href='#')
+                img.product-img.preview-img(src='/images/phones-preview-3.jpg' alt='превью')  
+            .vendor-code Артикул 
+              span.vendor-code_value 0
+                          
+          .product-description
+            span.product-name Samsung GT 139101I GALAXY S3
+            p.p_short-description Samsung создали дизайн заново, чтобы вы испытали невероятный опыт погружения в происходящее на экране вашего смартфона. 
+            .rate
+              img.img-rate(src='/images/icons/rate.png', alt='рейтинг')
+              .review-quantity 3
+          .product-price
+            span.price 11290 p
+            a.a.product-button-basket(href='#') В корзину
+            .product-status
+              span.indicator
+              span.status В наличии
