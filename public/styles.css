@@ -11,7 +11,7 @@ body {
   width: 1000px;
   margin: 0 auto;
    }
-.a {
+.link {
   text-decoration: none;
 }
 .geo-tag-icon {
@@ -20,11 +20,14 @@ body {
   width: 17px;
   
 }
-.sm-icons {
+.social__link {
   display: block;
-  margin-right: 10px;
+  margin-right: 12px;
   width: 30px;
   height: 30px;
+}
+.social__img {
+  width: inherit;
 }
 .h-menu {
   display: flex;
@@ -41,6 +44,10 @@ body {
   width: 1000px;
   margin-bottom: 50px;
   margin-top: 10px;
+}
+.social-menu {
+  margin-left: -40px;
+  margin-top: -5px;
 }
 .phone {
    right: 0;
@@ -72,40 +79,39 @@ body {
   font-weight: bold;
   color:rgb(255, 123, 0);
 }
-.h-menu_basket {
+.basket-menu {
   position: absolute;
   right: 0;
   padding-right: 10px;
   
 }
-.h-menu_basket_link {
-  margin-left: 30px;
- }
  
 .a_basket {
    color:black;
    font-weight: bold;
    text-decoration: underline;
+   margin-left: 30px;
   }
 .a_basket:hover {
    text-decoration: none;
   }
-.h-menu_main {
+.main-menu {
   width: 1000px;
   margin-top: 150px;
   position: absolute;
   margin-left: -40px;
-  }
-.a_main {
-    display: block;
-    color: black;
-    padding: 20px 17.95px 20px 17.95px;
-  }
-.checked {
+}
+.main-menu :nth-child(2) {
   background-color: rgb(255, 123, 0);
   color: white;
 }
-.a_main:hover {
+.main-menu__link {
+    display: block;
+    color:inherit;
+    padding: 20px 17.95px 20px 17.95px;
+    background-color: inherit;
+}
+.main-menu__link:hover {
   background-color:rgb(255, 123, 0);
   color: white;
 }

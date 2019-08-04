@@ -1,14 +1,15 @@
 extends layout.pug
 
+
 block content
+  include mixins/menu-template-img
+  include mixins/menu-template
   header.header
     .social
-      a(href='#')
-        img.sm-icons(src='/images/icons/FB-icon.png' alt='Facebook')
-      a(href='#')
-        img.sm-icons(src='../images/icons/VK-icon.png' alt='Vkontakte')
-      a(href='#')
-        img.sm-icons(src='../images/icons/TW-icon.png' alt='Twitter')
+      ul.h-menu.social-menu
+        +menu-template-img("social__link", "social__img", "#", '/images/icons/FB-icon.png', "Facebook")
+        +menu-template-img("social__link", "social__img", "#", '/images/icons/VK-icon.png', "Vkontakte")
+        +menu-template-img("social__link", "social__img", "#", '/images/icons/TW-icon.png', "Twitter")
       .adress
         img.geo-tag-icon(src='/images/icons/geo-tag.png' alt='geo-tag')
         span.adress__text ул.Маяковская 6, офис 16
@@ -19,29 +20,19 @@ block content
       form.search-form(action="/submit", method="get")
         input.search-input(type="search", name="s", placeholder="Что будем искать?")
         button.search-button(type="submit") Найти
-      ul.h-menu.h-menu_basket
-        li.h-menu_basket_link
-          a.a_basket(href='#') Карта проезда
-        li.h-menu_basket_link
-          a.a_basket(href='#') История заказов
-        li.h-menu_basket_link
-          a.a_basket(href='#') Корзина
-    ul.h-menu.h-menu_main
-      li.h-menu_main_item
-        a.a.a_main(href='#') Планшеты  
-      li.h-menu_main_item
-        a.a.a_main.checked(href='#') Мобильные телефоны
-      li.h-menu_main_item
-        a.a.a_main(href='#') Mp3 Плееры
-      li.h-menu_main_item
-        a.a.a_main(href='#') Персональные компьютеры
-      li.h-menu_main_item
-        a.a.a_main(href='#') Ноутбуки
-      li.h-menu_main_item
-        a.a.a_main(href='#') Аксессуары
-      li.h-menu_main_item
-        a.a.a_main(href='#') Бытовая техника
-      
+      ul.h-menu.basket-menu
+        +menu-template("link a_basket", "#", "Карта проезда")
+        +menu-template("link a_basket", "#", "Исторя заказов")
+        +menu-template("link a_basket", "#", "Корзина")
+    ul.h-menu.main-menu
+      +menu-template("link main-menu__link", "#", "Планшеты")
+      +menu-template("link main-menu__link", "#", "Мобильные телефоны")
+      +menu-template("link main-menu__link", "#", "Mp3 Плееры")
+      +menu-template("link main-menu__link", "#", "Персональные компьютеры")
+      +menu-template("link main-menu__link", "#", "Ноутбуки")
+      +menu-template("link main-menu__link", "#", "Аксессуары")
+      +menu-template("link main-menu__link", "#", "Бытовая техника")
+
   .content
     .current
       h1 Мобильные телефоны
@@ -128,7 +119,7 @@ block content
               a(href='#')
                 img.product-img.preview-img(src='/images/phones-preview-3.jpg' alt='превью')  
             .vendor-code Артикул 
-              span.vendor-code_value 0
+              span.vendor-code_value 1
                           
           .product-description
             span.product-name Samsung GT 139101I GALAXY S3
@@ -142,3 +133,4 @@ block content
             .product-status
               span.indicator
               span.status В наличии
+            
