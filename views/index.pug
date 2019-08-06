@@ -1,117 +1,29 @@
 extends layout.pug
 
-
+include mixins/section-template
 block content
-  include mixins/menu-template-img
-  include mixins/menu-template
-  header.header
-    .social
-      ul.h-menu.social__menu.social-menu
-        +menu-template-img("social-menu__link", "social-menu__img", "#", '/images/icons/FB-icon.png', "Facebook")
-        +menu-template-img("social-menu__link", "social-menu__img", "#", '/images/icons/VK-icon.png', "Vkontakte")
-        +menu-template-img("social-menu__link", "social-menu__img", "#", '/images/icons/TW-icon.png', "Twitter")
-      .social__adress.social-adress
-        img.social-adress__icon(src='/images/icons/geo-tag.png' alt='geo-tag')
-        span.social-adress__text ул.Маяковская 6, офис 16
-      .social__phone +7(951)732-51-46
-    .search
-      span.search__logo COOLTECH
-      form.search__form.search-form(action="/submit", method="get")
-        input.search-form__input(type="search", name="s", placeholder="Что будем искать?")
-        button.search-form__button(type="submit") Найти
-      ul.h-menu.search__menu
-        +menu-template("link a_basket", "#", "Карта проезда")
-        +menu-template("link a_basket", "#", "Исторя заказов")
-        +menu-template("link a_basket", "#", "Корзина")
-    ul.h-menu.main-menu
-      +menu-template("link main-menu__link", "#", "Планшеты")
-      +menu-template("link main-menu__link", "#", "Мобильные телефоны")
-      +menu-template("link main-menu__link", "#", "Mp3 Плееры")
-      +menu-template("link main-menu__link", "#", "Персональные компьютеры")
-      +menu-template("link main-menu__link", "#", "Ноутбуки")
-      +menu-template("link main-menu__link", "#", "Аксессуары")
-      +menu-template("link main-menu__link", "#", "Бытовая техника")
 
-  .content
-    ul.h-menu.breadcrumbs-menu
-      +menu-template("link breadcrumbs-menu__link", "#", "Главная")
-      +menu-template("link breadcrumbs-menu__link", "#", "Каталог")
-    .current-section
-      h1.current-section__text Мобильные телефоны
-        
-    aside.side-bar
-      ul.v-menu
-        +menu-template("link v-menu__link", "#", "Флагманы")
-        +menu-template("link v-menu__link", "#", "Бюджетная линейка")
-      ul.v-menu
-        +menu-template("link v-menu__link v-menu__link--black", "#", "Наличие в магазинах")
-        +menu-template("link v-menu__link v-menu__link--black", "#", "Брэнды")
-        +menu-template("link v-menu__link v-menu__link--black", "#", "Цена")
-        +menu-template("link v-menu__link v-menu__link--black", "#", "Цвет")
-        +menu-template("link v-menu__link v-menu__link--black", "#", "Операционные системы")
-
-    main
-      .view
-        span.view__property.view__text Сортировать по
-        form.view__form(action="#" method="post")
-          select.view__select.view-select(name='view')
-            option.view-select__option Цене
-            option.view-select__option Наличию
-            option.view-select__option Рейтингу
-        span.view__view.view__text Вид каталога
-        ul.view__menu.view-menu
-          +menu-template-img("view-menu__link", "view-menu__img", "#", '/images/icons/list-icon.png', "список")
-          +menu-template-img("view-menu__link", "view-menu__img", "#", 'images/icons/m-list-icon.png', "маркированный список")
-          +menu-template-img("view-menu__link", "view-menu__img", "#", 'images/icons/table-icon.png', "таблица")
-      .product-list 
-        .product
-          .product__photo.product-photo
-            a.product-photo__link(href='#')
-              img.product-photo__img.product-photo__img--big(src='/images/phones-main.jpg' alt='главное фото')
-            ul.h-menu.product__previews.product-previews
-              +menu-template-img("product-previews__link", "product-photo__img product-previews__img", "#", '/images/phones-preview-3.jpg', "превью_1")
-              +menu-template-img("product-previews__link", "product-photo__img product-previews__img", "#", '/images/phones-preview-2.jpg', "превью_2")
-              +menu-template-img("product-previews__link", "product-photo__img product-previews__img", "#", '/images/phones-preview-3.jpg', "превью_3")
-          .product__code Артикул 
-            span.product__code--value 0
-          .product__info.product-info
-            span.product-info__title Samsung GT 139101I GALAXY S3
-            p.product-info__description Samsung создали дизайн заново, чтобы вы испытали невероятный опыт погружения в происходящее на экране вашего смартфона. 
-          .product__rate.product-rate
-            img.product-rate__img(src='/images/icons/rate.png', alt='рейтинг')
-            span.product-rate__reviews 3
-          .product__price.product-price
-            span.product-price__price 11290 p
-            a.link.product-price__button(href='#') В корзину
-          .product__availability.product-availability
-            span.product-availability__indicator.product-availability__indicator--available
-            span.product-availability__status В наличии
-        .product
-          .product__photo.product-photo
-            a.product-photo__link(href='#')
-              img.product-photo__img.product-photo__img--big(src='/images/phones-main.jpg' alt='главное фото')
-            ul.h-menu.product__previews.product-previews
-              +menu-template-img("product-previews__link", "product-photo__img product-previews__img", "#", '/images/phones-preview-3.jpg', "превью_1")
-              +menu-template-img("product-previews__link", "product-photo__img product-previews__img", "#", '/images/phones-preview-2.jpg', "превью_2")
-              +menu-template-img("product-previews__link", "product-photo__img product-previews__img", "#", '/images/phones-preview-3.jpg', "превью_3")
-          .product__code Артикул 
-            span.product__code--value 0
-          .product__info.product-info
-            span.product-info__title Samsung GT 139101I GALAXY S3
-            p.product-info__description Samsung создали дизайн заново, чтобы вы испытали невероятный опыт погружения в происходящее на экране вашего смартфона. 
-          .product__rate.product-rate
-            img.product-rate__img(src='/images/icons/rate.png', alt='рейтинг')
-            span.product-rate__reviews 3
-          .product__price.product-price
-            span.product-price__price 11290 p
-            a.link.product-price__button(href='#') В корзину
-          .product__availability.product-availability
-            span.product-availability__indicator.product-availability__indicator--miss
-            span.product-availability__status Нет в наличии
-        
-        
-        
+  main
+    .section
+      +section-line("01200", "Price & Payment Procedures")
+      +section-line("01200", "Price & Payment Procedures")
+      +section-line("01292", "Project Financial Information")
+    .section
+      +section-line("01300", "Administrative requirements")
+      +section-line("01300", "Administrative requirements")
+      +section-line--disabled("01315", "Professional Consulting Firms")
+      +section-line("01316", "System Consulting Firms")
+      +section-line("01317", "Assotiations & Professional Organizations")
+      +section-line("01319", "Reference Books & Publications")
+    .section
+      +section-line("01400", "Quality Requirements")
+      +section-line--disabled("01400", "Quality Requirements")
+      .section__line.section-line
+        input.section-line__input(type="text")
+        span.section-line__value 6
+      .section__line.section-line
+        input.section-line__input(type="text")
+        span.section-line__value 6
       
-
-        
-        
+      
+    
