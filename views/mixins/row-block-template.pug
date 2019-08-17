@@ -1,0 +1,23 @@
+mixin row-block--current(src, href, alt, title, description, date)
+  .row-block
+        a.row-block__img(href= href)
+          .row-block__img-wrap
+            img.row-block__preview(src= src alt= alt)
+            .row-block__current ты смотришь
+            
+        .row-block__content-wrap
+          h2.row-block__title= title 
+          .row-block__description= description
+          .row-block__date= date
+
+mixin row-block(src, href, alt, title, description, date)
+  .row-block
+        a.row-block__img(href= href)
+          .row-block__img-wrap
+            img.row-block__preview(src= src alt= alt)
+            .row-block__play-icon 
+              span ►
+        .row-block__content-wrap
+          h2.row-block__title= title 
+          .row-block__description= description
+          .row-block__date= date
