@@ -1,29 +1,43 @@
 extends layout.pug
 
-include mixins/section-template
+include mixins/row-block-template
 block content
 
-  main
-    .section
-      +section-line("01200", "Price & Payment Procedures")
-      +section-line("01200", "Price & Payment Procedures")
-      +section-line("01292", "Project Financial Information")
-    .section
-      +section-line("01300", "Administrative requirements")
-      +section-line("01300", "Administrative requirements")
-      +section-line--disabled("01315", "Professional Consulting Firms")
-      +section-line("01316", "System Consulting Firms")
-      +section-line("01317", "Assotiations & Professional Organizations")
-      +section-line("01319", "Reference Books & Publications")
-    .section
-      +section-line("01400", "Quality Requirements")
-      +section-line--disabled("01400", "Quality Requirements")
-      .section__line.section-line
-        input.section-line__input(type="text")
-        span.section-line__value 6
-      .section__line.section-line
-        input.section-line__input(type="text")
-        span.section-line__value 6
-      
+  body
+    nav 
+      h2.nav__title СЕЗОНЫ
+      a(href="#").nav__prev-page
+      ul.nav
+        li.nav__item 
+          a(href="#").nav__link 
+            h2 1
+        li.nav__item 
+          a(href="#").nav__link 
+            h2 2
+        li.nav__item 
+          a(href="#").nav__link.nav__link--current-page
+            h2 3
+        li.nav__item 
+          a(href="#").nav__link 
+            h2 ЭКСКЛЮЗИВ
+      a(href="#").nav__next-page
+    .row
+      +row-block--current("img/preview_1.jpg", "#", "Preview", "20 серия 3 сезон", "Леша с дедом решают заработать на старых вещах Антона, пока тот не видит Леша с дедом решают заработать на старых вещах Антона, пока тот не видит", "28 ноября 2018")
+      +row-block("img/preview_1.jpg", "#", "Preview", "21 серия 3 сезон", "Леша с дедом решают заработать на старых вещах Антона, пока тот не видит Леша с дедом решают заработать на старых вещах Антона, пока тот не видит", "29 ноября 2018")
+      .ad-block.ad-block--mobile
+      +row-block("img/preview_1.jpg", "#", "Preview", "22 серия 3 сезон", "Леша с дедом решают заработать на старых вещах Антона, пока тот не видит Леша с дедом решают заработать на старых вещах Антона, пока тот не видит", "30 ноября 2018")
+      .ad-block.ad-block--tablet
+      +row-block("img/preview_1.jpg", "#", "Preview", "23 серия 3 сезон", "Леша с дедом решают заработать на старых вещах Антона, пока тот не видит Леша с дедом решают заработать на старых вещах Антона, пока тот не видит", "1 декабря 2018")
+      .ad-block.ad-block--desktop
+      +row-block("img/preview_1.jpg", "#", "Preview", "24 серия 3 сезон", "Леша с дедом решают заработать на старых вещах Антона, пока тот не видит Леша с дедом решают заработать на старых вещах Антона, пока тот не видит", "2 декабря 2018")
+      +row-block("img/preview_1.jpg", "#", "Preview", "25 серия 3 сезон", "Леша с дедом решают заработать на старых вещах Антона, пока тот не видит Леша с дедом решают заработать на старых вещах Антона, пока тот не видит", "3 декабря 2018")
+      +row-block("img/preview_1.jpg", "#", "Preview", "26 серия 3 сезон", "Леша с дедом решают заработать на старых вещах Антона, пока тот не видит Леша с дедом решают заработать на старых вещах Антона, пока тот не видит", "4 декабря 2018")
+      +row-block("img/preview_1.jpg", "#", "Preview", "27 серия 3 сезон", "Леша с дедом решают заработать на старых вещах Антона, пока тот не видит Леша с дедом решают заработать на старых вещах Антона, пока тот не видит", "5 декабря 2018")
       
     
+
+
+
+      
+  
+  
