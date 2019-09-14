@@ -1,23 +1,19 @@
-function squaring(a) { 
-    console.log(a * a);
+let arr = ['dad','vasya','domishek','valera','petya','faf','petushok'];
+function allLongestStrings(arr) {
+    let number = 0;
+    //Ищем самое длинное слово
+    for (let i = 0; i < arr.length; i++) {
+        if (number < arr[i].length) {
+            number = arr[i].length;
+        }
+    }
+    let newArr = [];
+    //Добавляем в новый массив все слова с максимальной длинной
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i].length == number) {
+            newArr.push(arr[i])
+        }
+    }
+    alert(newArr);
 }
-squaring(13.4);
-//END of squaring
-
-function areaCalc(object) { 
-    console.log(object.width*object.height);
-}
-let block = { 
-    width: 250,
-    height: 1250,
-}
-areaCalc(block);
-
-//END of areaCalc math
-
-function showMessage(name) {
-    console.log("Hello, " + name + "!");
-}
-
-showMessage("Igor");
-//End of showMessage
+allLongestStrings(arr);
