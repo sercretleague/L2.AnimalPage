@@ -18,6 +18,7 @@ h1 {
   flex-flow: column;
   padding: 12px;
   margin-bottom: 12px;
+  position: relative;
 }
 
 .animal:last-child {
@@ -67,3 +68,15 @@ h1 {
   margin-left: 10px;
 }
 
+.tooltip {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(calc(100% + 5px), calc(-100% - 5px));
+  background: #ffffff;
+  font-size: 16px;
+  color: #000000;
+  padding: 6px;
+  box-shadow: 1px 1px 1px 1px #000000;
+}
