@@ -1,16 +1,22 @@
 h1 {
-  color: red;
+  color:blueviolet;
+  text-decoration: none;
+  border: 3px dashed #c4f7c4;
+  text-align: center;
+  width: 200px;
+  margin-left: 130px;
 }
-div .an {
+.an {
 width: 500px;
-height: 500px;
-color: white;
+height: 300px;
+color: black;
 font-size: 24px;
-background-color: rebeccapurple;
+background-color: rgba(156, 146, 165, 0.11);
 border: 3px solid yellow;
+margin: 30px;
 }
 
-div p {
+.cat {
 font-size: 20px;
 text-decoration: underline;
 font-weight: bold;
@@ -20,17 +26,28 @@ li a {
   text-decoration: none;
   padding: 5px;
 }
-ul .legs:nth-child(n+1) {
+ul.legs:nth-child(n+1) {
 text-decoration: line-through;
 text-decoration-color: teal;
 color: yellow;
 }
-.table {
-  border: 2px solid royalblue;
+table {
   border-collapse: collapse;
+  margin: 30px;
+}
+
+table td {
+  border: 5px solid royalblue;
   padding: 15px 20px;
   background-color: snow;
+  width: 150px;
+  height: 100px;
+  margin: 30px;
 }
-.table td:nth-child(2n+1) {
+table td:nth-child(2n+1) {
   background-color: silver;
+}
+img {
+  width: 50%;
+  height: 50%;
 }
