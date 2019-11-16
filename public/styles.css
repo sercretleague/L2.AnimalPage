@@ -1,3 +1,36 @@
 h1 {
-  color: green;
+  color: red;
+}
+div .an {
+width: 300px;
+height: 300px;
+color: white;
+font-size: 24px;
+background-color: rebeccapurple;
+border: 3px solid yellow;
+}
+
+div p {
+font-size: 20px;
+text-decoration: underline;
+font-weight: bold;
+padding: 20px;
+}
+li a {
+  text-decoration: none;
+  padding: 5px;
+}
+ul .legs:nth-child(n+1) {
+text-decoration: line-through;
+text-decoration-color: teal;
+color: yellow;
+}
+.table {
+  border: 2px solid royalblue;
+  border-collapse: collapse;
+  padding: 15px 20px;
+  background-color: snow;
+}
+.table td:nth-child(2n+1) {
+  background-color: silver;
 }
