@@ -34,7 +34,3 @@ color: yellow;
 .table td:nth-child(2n+1) {
   background-color: silver;
 }
-img {
-  width: 50%;
-  height: 50%
-}
