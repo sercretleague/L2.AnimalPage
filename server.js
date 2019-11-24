@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
   const compiledFunction = pug.compileFile('./views/index.pug');
   
   res.send(compiledFunction({
-    name: 'Porosenok'
+    name: "WOLF"
   }));
 });
 
