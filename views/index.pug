@@ -2,6 +2,27 @@ extends layout.pug
 
 block content
   h1 My favourite animal is #{name}
-  
+  div.an
+    p.cat How many legs does a cat have?
+    ul.legs
+      li
+       a(href='Google.com') 2
+      li
+       a(href='Google.com') 4
+      li
+       a(href='Google.com') 6
+      li
+       a(href='Google.com') 7
+  table
+    th Animals
+    th Also
+    tr
+      td monkey
+      td tiger
+    tr
+      td dog
+      td cat
+  img(src='/3.jpg' alt='monkey')    
+    
 
   
