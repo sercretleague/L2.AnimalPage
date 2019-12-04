@@ -1,7 +1,110 @@
 extends layout.pug
 
 block content
-  h1 My favourite animal is #{name}
-  
-
+  header
+    .header
+      .header-social
+        a.social-btn.social-btn-fb(href='facebook.com')
+        a.social-btn.social-btn-vk(href='vk.com')
+        a.social-btn.social-btn-tw(href='twitter.com')
+      .header-adress    
+        .ad  
+          img(src='/beacon.png')
+          a(href='#') ул. Маяковская, 6, офис 17
+        .tel
+          img(src='/phone.png') 
+          span +7(921)123-12-13
+    .header-search
+      .logo
+        img(src='/logo.png', width='250px', alt='cooltech')
+      form(method='get', action='#')
+        input(type='text', name='search', placeholder=' Что будем искать')
+        input.button(type='submit', name='find', value='Найти')
+      .info
+        .map
+          a(href='#') Карта проезда
+        .order-hist
+          a(href='#') История заказов
+        .cart  
+          a(href='#') Корзина
+    .header-nav
+      .tablets
+        a(href='#') Планшеты
+      .cellphone 
+        a(href='#') Мобильные телефоны
+      .players
+        a(href='#') Mp3 Плееры
+      .pc
+        a(href='#') Персональные компьютеры
+      .laptop
+        a(href='#') Ноутбуки
+      .accessories
+        a(href='#') Аксессуары
+      .appliances
+        a(href='#') Бытовая техника
+  nav
+    a.main(href="#") Главная
+    a.cat(href='#') Каталог
+  main
+    aside
+      h2  Мобильные телефоны
+      ul.type
+        li
+          a(href='#') Флагманы
+        li
+          a(href='#') Бюджетная линейка
+      ul.options
+        li
+          a(href='#') Наличие в магазинах
+        li
+          a(href='#') Бренды
+        li 
+          a(href='#') Цена
+        li
+          a(href='#') Цвет
+        li  
+          a(href='#') Операционные системы
+    section
+      .section-nav
+        .sort
+          label(for='sort') Сортировать по
+          select(name="sort" id='sort')
+            option по цене
+        .catalogue  
+          p Вид каталога
+          a.view.view-1(href='#')
+          a.view.view-2(href='#')
+          a.view.view-3(href='#')
+      article
+        .goods 
+          .example
+            img(src='/example.png', width='80%')
+            p Артикул 0
+          .description  
+            h3 Samsung GT 139101I GALAXY S3
+            p Тип SIM карты Micro-SIM Колическтво SIM-карт 1 Цвет Белый ОС Android Связь 3G Есть 4G(LTE) Нет GPS-модуль Есть
+            img(src='/stars.png')
+          .price
+            h2 11290Р
+            input.button(type='button' value='В корзину')
+            br
+            .instock
+              img(src='/bulb.png')
+              span.bulb В наличии
+        .goods 
+          .example
+            img(src='example.png', width='80%')
+            p Артикул 1
+          .description  
+            h3 Samsung GT 139101I GALAXY S3
+            p Тип SIM карты Micro-SIM Колическтво SIM-карт 1 Цвет Белый ОС Android Связь 3G Есть 4G(LTE) Нет GPS-модуль Есть
+            img(src='/stars.png')
+          .price
+            h2 11290Р
+            input.button(type='button' value='В корзину')
+            br
+            .instock
+              img(src='/bulb.png')
+              span.bulb В наличии
+        
   
