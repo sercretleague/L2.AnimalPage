@@ -3,108 +3,108 @@ extends layout.pug
 block content
   header
     .header
-      .header-social
-        a.social-btn.social-btn-fb(href='facebook.com')
-        a.social-btn.social-btn-vk(href='vk.com')
-        a.social-btn.social-btn-tw(href='twitter.com')
-      .header-adress    
-        .ad  
-          img(src='/beacon.png')
-          a(href='#') ул. Маяковская, 6, офис 17
-        .tel
-          img(src='/phone.png') 
-          span +7(921)123-12-13
-    .header-search
-      .logo
-        img(src='/logo.png', width='250px', alt='cooltech')
-      form(method='get', action='#')
-        input(type='text', name='search', placeholder=' Что будем искать')
-        input.button(type='submit', name='find', value='Найти')
+      .header__social
+        a.header__social__btn.header__social__btn--fb(href='facebook.com')
+        a.header__social__btn.header__social__btn--vk(href='vk.com')
+        a.header__social__btn.header__social__btn--tw(href='twitter.com')
+      .header__adress    
+        .header__adress__ad  
+          img.header__adress__ad__img(src='/beacon.png')
+          a.header__adress__ad__link(href='#') ул. Маяковская, 6, офис 17
+        .header__adress__tel
+          img.header__adress__tel__img(src='/phone.png') 
+          span.header__adress__tel__num +7(921)123-12-13
+    .header__search
+      .header__search__logo
+        img.header__search__img(src='/logo.png', width='250px', alt='cooltech')
+      form.header__search__form__form(method='get', action='#')
+        input.header__search__form.header__search__form__input(type='text', name='search', placeholder=' Что будем искать')
+        input.header__search__form.header__search__form__button.button(type='submit', name='find', value='Найти')
       .info
-        .map
-          a(href='#') Карта проезда
-        .order-hist
-          a(href='#') История заказов
-        .cart  
-          a(href='#') Корзина
-    .header-nav
-      .tablets
-        a(href='#') Планшеты
-      .cellphone 
-        a(href='#') Мобильные телефоны
-      .players
-        a(href='#') Mp3 Плееры
-      .pc
-        a(href='#') Персональные компьютеры
-      .laptop
-        a(href='#') Ноутбуки
-      .accessories
-        a(href='#') Аксессуары
-      .appliances
-        a(href='#') Бытовая техника
-  nav
-    a.main(href="#") Главная
-    a.cat(href='#') Каталог
-  main
-    aside
-      h2  Мобильные телефоны
-      ul.type
-        li
-          a(href='#') Флагманы
-        li
-          a(href='#') Бюджетная линейка
-      ul.options
-        li
-          a(href='#') Наличие в магазинах
-        li
-          a(href='#') Бренды
-        li 
-          a(href='#') Цена
-        li
-          a(href='#') Цвет
-        li  
-          a(href='#') Операционные системы
-    section
-      .section-nav
-        .sort
-          label(for='sort') Сортировать по
-          select(name="sort" id='sort')
-            option по цене
-        .catalogue  
-          p Вид каталога
-          a.view.view-1(href='#')
-          a.view.view-2(href='#')
-          a.view.view-3(href='#')
-      article
-        .goods 
-          .example
-            img(src='/example.png', width='80%')
-            p Артикул 0
-          .description  
-            h3 Samsung GT 139101I GALAXY S3
-            p Тип SIM карты Micro-SIM Колическтво SIM-карт 1 Цвет Белый ОС Android Связь 3G Есть 4G(LTE) Нет GPS-модуль Есть
-            img(src='/stars.png')
-          .price
-            h2 11290Р
-            input.button(type='button' value='В корзину')
+        .info__map
+          a.info__map__link(href='#') Карта проезда
+        .info__order-hist
+          a.info__order-hist__link(href='#') История заказов
+        .info__cart  
+          a.info__cart__link(href='#') Корзина
+    .header__nav
+      .header__nav__tablets
+        a.header__nav__link(href='#') Планшеты
+      .header__nav__cellphone 
+        a.header__nav__link(href='#') Мобильные телефоны
+      .header__nav__players
+        a.header__nav__link(href='#') Mp3 Плееры
+      .header__nav__pc
+        a.header__nav__link(href='#') Персональные компьютеры
+      .header__nav__laptop
+        a.header__nav__link(href='#') Ноутбуки
+      .header__nav__accessories
+        a.header__nav__link(href='#') Аксессуары
+      .header__nav__appliances
+        a.header__nav__link(href='#') Бытовая техника
+  nav.main__nav
+    a.main__nav__link.main__nav__link--main(href="#") Главная
+    a.main__nav__link.main__nav__link--cat(href='#') Каталог
+  main.main__catalogue
+    aside.main__catalogue__aside
+      h2.main__catalogue__h2  Мобильные телефоны
+      ul.main__catalogue__list.main__catalogue____list__type
+        li.main__catalogue__item.main__catalouge__item__type
+          a.main__catalogue__link.main__catalogue__link__type(href='#') Флагманы
+        li.main__catalogue__item.main__catalouge__item__type
+          a.main__catalogue__link.main__catalogue__link__type(href='#') Бюджетная линейка
+      ul.main__catalogue__list.main__catalogue__list__options
+        li.main__catalogue__item.main__catalogue__item__options
+          a.main__catalogue__link.main__catalogue__link__options(href='#') Наличие в магазинах
+        li.main__catalogue__item.main__catalogue__item__options
+          a.main__catalogue__link.main__catalogue__link__options(href='#') Бренды
+        li.main__catalogue__item.main__catalogue__item__options
+          a.main__catalogue__link.main__catalogue__link__options(href='#') Цена
+        li.main__catalogue__item.main__catalogue__item__options
+          a.main__catalogue__link.main__catalogue__link__options(href='#') Цвет
+        li.main__catalogue__item.main__catalogue__item__options  
+          a.main__catalogue__link.main__catalogue__link__options(href='#') Операционные системы
+    section.section__main
+      .section__main__nav
+        .section__main__nav__sort
+          label.section__main__nav__label(for='sort') Сортировать по
+          select.section__main__nav__select(name="sort" id='sort')
+            option.section__main__nav__option по цене
+        .section__main__nav__catalogue  
+          p.section__main__nav__catalogue__p Вид каталога
+          a.section__main__nav__catalogue__view.section__main__nav__catalogue__view-1(href='#')
+          a.section__main__nav__catalogue__view.section__main__nav__catalogue__view-2(href='#')
+          a.section__main__nav__catalogue__view.section__main__nav__catalogue__view-3(href='#')
+      article.article__main
+        .article__main__goods 
+          .article__main__goods__example
+            img.article__main__goods__example__img(src='/example.png', width='80%')
+            p.article__main__goods__example__p Артикул 0
+          .article__main__goods__description  
+            h3.article__main__goods__description__h3 Samsung GT 139101I GALAXY S3
+            p.article__main__goods__description__p Тип SIM карты Micro-SIM Колическтво SIM-карт 1 Цвет Белый ОС Android Связь 3G Есть 4G(LTE) Нет GPS-модуль Есть
+            img.article__main__goods__description__img(src='/stars.png')
+          .article__main__goods__price
+            h2.article__main__goods__price__h2 11290Р
+            input.article__main__goods__price__button.button(type='button' value='В корзину')
             br
-            .instock
-              img(src='/bulb.png')
-              span.bulb В наличии
-        .goods 
-          .example
-            img(src='example.png', width='80%')
-            p Артикул 1
-          .description  
-            h3 Samsung GT 139101I GALAXY S3
-            p Тип SIM карты Micro-SIM Колическтво SIM-карт 1 Цвет Белый ОС Android Связь 3G Есть 4G(LTE) Нет GPS-модуль Есть
-            img(src='/stars.png')
-          .price
-            h2 11290Р
-            input.button(type='button' value='В корзину')
+            .article__main__goods__instock
+              img.article__main__goods__instock__img(src='/bulb.png')
+              span.article__main__goods__instock__bulb В наличии
+        .article__main__goods 
+          .article__main__goods__example
+            img.article__main__goods__example__img(src='/example.png', width='80%')
+            p.article__main__goods__example__p Артикул 0
+          .article__main__goods__description  
+            h3.article__main__goods__description__h3 Samsung GT 139101I GALAXY S3
+            p.article__main__goods__description__p Тип SIM карты Micro-SIM Колическтво SIM-карт 1 Цвет Белый ОС Android Связь 3G Есть 4G(LTE) Нет GPS-модуль Есть
+            img.article__main__goods__description__img(src='/stars.png')
+          .article__main__goods__price
+            h2.article__main__goods__price__h2 11290Р
+            input.article__main__goods__price__button.button(type='button' value='В корзину')
             br
-            .instock
-              img(src='/bulb.png')
-              span.bulb В наличии
+            .article__main__goods__instock
+              img.article__main__goods__instock__img(src='/bulb.png')
+              span.article__main__goods__instock__bulb В наличии
         
   
