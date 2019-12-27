@@ -1,7 +1,70 @@
 extends layout.pug
 
 block content
-  h1 My favourite animal is #{name}
-  
-
-  
+  .main
+    ul.main__list
+      li.main__item
+        .square
+        .horizontal__line
+        span.main__item-number 01200
+        span.main__item-label Price&Payment Procedures
+        ul.sub__list
+          li.sub__item
+            .square
+            .horizontal__line
+            span.sub__item-number 01200
+            span.sub__item-label Price&Payment Procedures
+          li.sub__item  
+            .square
+            .horizontal__line
+            span.sub__item-number 01292
+            span.sub__item-label Project Financial Information
+      li.main__item
+        .square
+        .horizontal__line
+        span.main__item-number 01300
+        span.main__item-label Administrative Requirements
+        ul.sub__list
+          li.sub__item
+            .square
+            .horizontal__line
+            span.sub__item-number 01300
+            span.sub__item-label Administrative Requirements
+          li.sub__item  
+            .square
+            .horizontal__line
+            span.sub__item-number.sub__item--grey 01315
+            span.sub__item-label.sub__item--grey Professional Consulting Firms
+          li.sub__item  
+            .square
+            .horizontal__line
+            span.sub__item-number 01316
+            span.sub__item-label Systems Consulting Firms
+          li.sub__item  
+            .square
+            .horizontal__line
+            span.sub__item-number 01317
+            span.sub__item-label Associations & Proffessional Organizations 
+          li.sub__item  
+            .square.none
+            .horizontal__line
+            span.sub__item-number 01319
+            span.sub__item-label Reference Books & Publications
+      li.main__item
+        .square
+        .horizontal__line
+        span.main__item-number 01400  
+        span.main__item-label Quality Requirements
+        ul.sub__list
+          li.sub__item  
+            .square
+            .horizontal__line
+            span.sub__item-number.sub__item--grey 01400
+            span.sub__item-label.sub__item--grey Quality Requirements
+          li.sub__item
+            form.sub__form(method='get')
+              .square
+              .horizontal__line
+              input.sub__item-input(type='text')
+              span.sub__item-label 6
+    

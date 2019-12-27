@@ -1,3 +1,119 @@
-h1 {
-  color: green;
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  width: 50%;
+}
+
+li {
+  list-style: none;
+  color: #417398;
+}
+
+.horizontal__line {
+  width: 2.5%;
+  height: 2px;
+  background-color: lightgrey;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.main__item > .square::after {
+  content: '-';
+  display: inline-block;
+  vertical-align: top;
+  position: absolute;
+  top: -55%;
+  left: 20%
+}
+
+.square {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border: 1px solid lightgrey;
+  vertical-align: middle;
+  position: relative;
+}
+
+.square::before {
+  content: "";
+  display: inline-block;
+  width: 2px;
+  height: 2.4em;
+  background-color: lightgrey;
+  top: 10px;
+  left: 3.5px;
+  position: absolute;
+}
+
+.main__item:nth-child(1) > .square::before {
+  content: "";
+  display: inline-block;
+  width: 2px;
+  height: 8.7em;
+  background-color: lightgrey;
+  top: 10px;
+  left: 3.5px;
+  position: absolute;
+}
+
+.main__item:nth-child(2) > .square::before {
+  content: "";
+  display: inline-block;
+  width: 2px;
+  height: 18em;
+  background-color: lightgrey;
+  top: 10px;
+  left: 3.5px;
+  position: absolute;
+}
+
+.sub__item:last-child .square::before,
+.main__item:last-child > .square::before {
+  display: none;
+}
+
+.main__item {
+  font-weight: bold;
+}
+
+.main__item-number {
+  margin-right: 35%;
+  vertical-align: middle;
+}
+
+.main__item-label {
+  vertical-align: middle;
+}
+
+.sub__item {
+  font-weight: normal;
+  margin-bottom: 5%;
+}
+
+.sub__item-number {
+  vertical-align: middle;
+  margin-right: 35%;
+}
+
+.sub__item-label {
+  vertical-align: middle;
+}
+
+.sub__item:first-child {
+  margin-top: 5%;
+}
+
+.sub__item--grey {
+  color: grey;
+}
+
+.sub__item-input {
+  vertical-align: middle;
+  min-width: 32%;
+  margin-right: 9%;
+  border-radius: 4px;
 }
