@@ -1,7 +1,73 @@
 extends layout.pug
+include ./mixins
 
 block content
-  h1 My favourite animal is #{name}
-  
-
-  
+  header.header__nav
+    ul.header__list
+      +header-item("СЕЗОНЫ")
+      +header-item("<")
+      +header-item("1")
+      +header-item("2")
+      +header-item("3")
+      +header-item("ЭКСКЛЮЗИВ")
+      +header-item(">")
+  main.main__nav
+    article.nav__block
+      .nav__item.col-3.col-m-4.col-s-6
+        .nav__img
+          img.preview(src='/2.jpg')
+        .nav__description
+          h3.title 21 СЕРИЯ
+          p.desc Что-то происходит
+          time.time(datetime='2019-11-01') 1 ноября 2019
+      .nav__item.col-3.col-m-4.col-s-6
+        .nav__img
+          img.preview(src='/2.jpg')
+        .nav__description
+          h3.title 21 СЕРИЯ
+          p.desc Что-то происходит
+          time.time(datetime='2019-11-01') 1 ноября 2019
+      .nav__item.col-3.col-m-4.s-hidden
+        .nav__img
+          img.preview(src='/2.jpg')
+        .nav__description
+          h3.title 21 СЕРИЯ
+          p.desc Что-то происходит
+          time.time(datetime='2019-11-01') 1 ноября 2019
+      .nav__item.col-3.m-hidden.s-hidden
+        .nav__img
+          img.preview(src='/2.jpg')
+        .nav__description
+          h3.title 21 СЕРИЯ
+          p.desc Что-то происходит
+          time.time(datetime='2019-11-01') 1 ноября 2019
+      .nav__item.col-12.col-m-12.col-s-12
+        img.ad(src='/12.1.21.jpg')
+      .nav__item.col-3.col-m-4.col-s-6
+        .nav__img
+          img.preview(src='/2.jpg')
+        .nav__description
+          h3.title 21 СЕРИЯ
+          p.desc Что-то происходит
+          time.time(datetime='2019-11-01') 1 ноября 2019
+      .nav__item.col-3.col-m-4.col-s-6
+        .nav__img
+          img.preview(src='/2.jpg')
+        .nav__description
+          h3.title 21 СЕРИЯ
+          p.desc Что-то происходит
+          time.time(datetime='2019-11-01') 1 ноября 2019
+      .nav__item.col-3.col-m-4.s-hidden
+        .nav__img
+          img.preview(src='/2.jpg')
+        .nav__description
+          h3.title 21 СЕРИЯ
+          p.desc Что-то происходит
+          time.time(datetime='2019-11-01') 1 ноября 2019
+      .nav__item.col-3.m-hidden.s-hidden  
+        .nav__img
+          img.preview(src='/2.jpg')
+        .nav__description
+          h3.title 21 СЕРИЯ
+          p.desc Что-то происходит
+          time.time(datetime='2019-11-01') 1 ноября 2019
