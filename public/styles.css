@@ -4,7 +4,7 @@ body {
 }
 
 .main {
-  width: 50%;
+  width: 1200px;
 }
 
 li {
@@ -36,20 +36,25 @@ li {
   border: 1px solid lightgrey;
   vertical-align: middle;
   position: relative;
+  background: white;
 }
 
-.square::before {
+.main__item:before {
   content: "";
   display: inline-block;
   width: 2px;
-  height: 2.4em;
+  height: 100%;
   background-color: lightgrey;
   top: 10px;
-  left: 3.5px;
   position: absolute;
+  left: 5px;
 }
 
-.main__item:nth-child(1) > .square::before {
+.main__item:last-child:before {
+  display: none;
+}
+
+/* .main__item:nth-child(1) > .square::before {
   content: "";
   display: inline-block;
   width: 2px;
@@ -58,9 +63,9 @@ li {
   top: 10px;
   left: 3.5px;
   position: absolute;
-}
+} */
 
-.main__item:nth-child(2) > .square::before {
+/* .main__item:nth-child(2) > .square::before {
   content: "";
   display: inline-block;
   width: 2px;
@@ -69,15 +74,17 @@ li {
   top: 10px;
   left: 3.5px;
   position: absolute;
-}
+} */
 
-.sub__item:last-child .square::before,
+/* .sub__item:last-child .square::before,
 .main__item:last-child > .square::before {
   display: none;
-}
+} */
 
 .main__item {
   font-weight: bold;
+  position: relative;
+  padding-bottom: 5%;
 }
 
 .main__item-number {
@@ -92,6 +99,10 @@ li {
 .sub__item {
   font-weight: normal;
   margin-bottom: 5%;
+}
+
+.sub__item:last-child {
+  margin-bottom: 0;
 }
 
 .sub__item-number {
